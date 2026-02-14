@@ -2,7 +2,6 @@ name: flutter_barcode_scanner_animation
 description: "Flutter package designed to enhance barcode scanning experiences by integrating seamless animations with live camera feed."
 version: 0.0.1
 homepage: https://github.com/horlengg/flutter_barcode_scanner_animation
-license: MIT
 repository: https://github.com/horlengg/flutter_barcode_scanner_animation
 issue_tracker: https://github.com/horlengg/flutter_barcode_scanner_animation/issues
 
