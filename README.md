@@ -8,7 +8,7 @@ Flutter package designed to enhance barcode scanning experiences by integrating 
 <br>
 <br>
 
-![scan_barcode.gif](./scan_barcode.gif)
+![scan_barcode.gif](https://github.com/horlengg/flutter_barcode_scanner_animation/raw/dev/scan_barcode.gif)
 
 
 <br>
@@ -266,6 +266,7 @@ class _BarcodeScannerDemoPageState extends State<BarcodeScannerDemoPage> {
         controller: _controller,
         onDetected: _onDetected,
         onCompleted: _onComplete,
+        // formats: [BarcodeFormat.qrCode],
         // barcodeFrameViewBuilder: (context, rect,barcode){
         //   return Container(
         //     decoration: BoxDecoration(

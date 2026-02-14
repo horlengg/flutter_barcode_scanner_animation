@@ -30,7 +30,8 @@ class BarcodeScannerView extends StatefulWidget {
     this.enableAutoZoom = true,
     this.children = const [],
     this.barcodeFrameViewBuilder,
-    this.barcodeFramePadding = 10.0
+    this.barcodeFramePadding = 10.0,
+    this.formats = const [ BarcodeFormat.all ]
   });
 
 
@@ -62,8 +63,12 @@ class BarcodeScannerView extends StatefulWidget {
   /// Custom overlay
   final List<Widget> children;
 
-  // 
+  // Barcode padding
   final double barcodeFramePadding;
+
+  // Barcode format
+
+  final List<BarcodeFormat> formats;
 
   final Widget Function(BuildContext context,Rect rect,Barcode? barcode)? barcodeFrameViewBuilder;
 
@@ -108,7 +113,7 @@ class BarcodeScannerViewState extends State<BarcodeScannerView> with SingleTicke
   @override
   void initState() {
     super.initState();
-    _barcodeScanner = BarcodeScanner(formats: [BarcodeFormat.all]);
+    _barcodeScanner = BarcodeScanner(formats: widget.formats);
     _initialize();
   }
 
